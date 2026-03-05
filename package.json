@@ -1,0 +1,22 @@
+{
+  "name": "monorepo",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev:api": "bun --filter api dev",
+    "dev:web": "bun --filter web dev",
+    "dev": "bun --filter '*' dev"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "workspaces": [
+    "apps/*"
+  ],
+  "dependencies": {
+    "@biomejs/biome": "^2.4.6"
+  }
+}
